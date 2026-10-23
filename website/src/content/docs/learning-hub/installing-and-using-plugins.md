@@ -140,6 +140,8 @@ Or from a local path:
 copilot plugin marketplace add /path/to/local-marketplace
 ```
 
+Marketplace catalogs can point individual plugins at a subdirectory of a Git repository using a `git-subdir` source, so a monorepo can host several plugins. Long plugin descriptions in a catalog are also supported (as of Copilot CLI v1.0.102).
+
 ### Sharing Marketplace Registrations Across a Team
 
 To automatically register an additional marketplace for everyone working in a repository, add an `extraKnownMarketplaces` entry to your `.github/copilot-settings.json` (or `config.json`):
