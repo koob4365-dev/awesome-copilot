@@ -431,10 +431,14 @@ CLI settings use **camelCase** naming. Key settings added in recent releases:
 | `stayInAutopilot` | Keep the CLI in autopilot mode after an autopilot task completes, instead of returning to interactive mode |
 | `defaultMode` | Startup mode for new interactive sessions (e.g., `interactive`, `autopilot`, `plan`) |
 | `defaultPermissionMode` | Default approval behaviour for new interactive sessions, independent from `defaultMode` |
+| `assistedApprovalInstructions` | Custom guidance for the Assisted Permissions judge when it makes confirmation decisions |
+| `showReasoning` | Show model reasoning in responses; set or unset it with `/config` or `/settings` |
 
 > **Note**: Older snake_case names (e.g., `include_gitignored`, `auto_updates_channel`) are still accepted for backward compatibility, but camelCase is now the preferred format.
 
 If the CLI is interrupted unexpectedly — a crash or a machine restart — startup offers to restore any sessions that were still open, so you don't have to reopen each terminal by hand.
+
+For one-off prompt-mode runs (`-p` or piped stdin) in a folder you haven't trusted yet, pass `--trust-folder`. To turn off client telemetry uploads, pass `--disable-client-telemetry`.
 
 Use `copilot login --with-token` to read an authentication token from stdin instead of going through the interactive browser or device-code flow — useful for scripted or containerized setups where a token is already available in the environment.
 
