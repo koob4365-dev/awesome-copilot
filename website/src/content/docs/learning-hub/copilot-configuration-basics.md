@@ -777,6 +777,8 @@ The `/permissions` command opens an interactive picker for switching between app
 
 Use `/permissions` as a quick mode switcher when you want to change how the agent handles tool approvals without remembering individual command names.
 
+In auto (assisted) mode, set `assistedApprovalInstructions` in your settings to give the approval judge custom guidance — for example, which kinds of commands your team always wants to confirm.
+
 The `--effort` flag (shorthand for `--reasoning-effort`) controls how much computational reasoning the model applies to a request:
 
 ```bash
@@ -950,6 +952,7 @@ This section collects settings and behaviors that **changed or were renamed** in
 - **Auto allow-all mode requires experimental mode.** The previous `AUTO_APPROVAL` environment variable approach was removed in favor of `/experimental on` (or `--experimental`) plus `/allow-all auto`.
 - **Ctrl+D no longer queues messages.** It now uses its default terminal behavior; use **Ctrl+Q** or **Ctrl+Enter** to queue a message instead.
 - **The CLI's command-line parser was rewritten** (moving off Commander to a Rust-based grammar). As a result, some error and help wording changed, `copilot login --host` now works correctly, and `--max-autopilot-continues` no longer accepts scientific notation as a value.
+- **Remote launch flags changed.** The legacy `--remote` / `--no-remote` startup flags were retired in favor of clearer hosting/connection flags; check `copilot --help` and update any scripts that used them.
 - **Model availability changes over time.** The model picker periodically retires older models; if a model you previously pinned in a custom agent or config disappears from `/model`, switch to a current model or a [family alias](#model-picker) instead.
 
 ## Common Questions
