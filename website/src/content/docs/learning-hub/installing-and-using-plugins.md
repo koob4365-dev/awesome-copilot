@@ -195,6 +195,10 @@ Pinning to a SHA guarantees that everyone on the team installs plugins from exac
 - **Change control** — review and approve plugin updates before rolling them out team-wide
 - **Stability** — prevent breaking changes in upstream marketplaces from impacting your team without notice
 
+### Marketplaces in a Repository Subdirectory
+
+Plugin marketplaces can use a `git-subdir` source, so a marketplace (and its plugins) can live in a subdirectory of a larger repository rather than at its root. Marketplace entries also accept long plugin descriptions.
+
 ## Installing Plugins
 
 ### From Copilot CLI

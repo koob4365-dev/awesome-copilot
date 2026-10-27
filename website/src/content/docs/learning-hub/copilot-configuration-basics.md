@@ -928,6 +928,10 @@ Run `/config` to open a dedicated sidebar configuration screen inside the CLI, g
 
 `/sandbox` supports per-host network allow/deny rules that layer on top of your configured upstream proxy, instead of replacing it. This lets you permit or block specific hosts for sandboxed commands without reconfiguring your whole proxy setup — useful when a sandboxed build or test needs to reach one extra domain (like a package registry mirror) while keeping the rest of your network policy intact.
 
+### Guiding Assisted Permissions
+
+In **Assisted** permission mode, the CLI asks for confirmation only when a tool request fails an AI safety check. Set `assistedApprovalInstructions` in your configuration to give that check plain-language guidance, such as which kinds of commands your team always wants confirmed or considers routine.
+
 ### Memory and Session Import
 
 Session and memory import commands accept the semantic JSONL interchange format, making it possible to bring saved session history or memory entries into Copilot CLI from an external export rather than starting from scratch.
